@@ -2,6 +2,10 @@
 
 Step-by-step to replicate this toolchain. Assumes macOS with Node.js, npm, Python 3.10+, OpenCode already installed.
 
+## Before You Start
+
+This guide uses placeholder paths. Replace `$HOME` with your home directory and `$NPM_GLOBAL` with your npm global bin path (run `npm root -g` to find it).
+
 ## 1. Core CLIs
 
 ```bash
@@ -113,7 +117,7 @@ Add these to the `"mcp"` object:
 },
 "magic-ui": {
   "type": "local",
-  "command": ["node", "/opt/homebrew/lib/node_modules/@magicuidesign/mcp/dist/server.js"],
+  "command": ["node", "$NPM_GLOBAL/@magicuidesign/mcp/dist/server.js"],
   "enabled": false
 },
 "tailwindcss": {
@@ -128,7 +132,7 @@ Add these to the `"mcp"` object:
 },
 "wcag": {
   "type": "local",
-  "command": ["node", "/Users/jacobgruber/Projects/Design/wcag-mcp/wcag-server.js"],
+  "command": ["node", "$HOME/Projects/Design/wcag-mcp/wcag-server.js"],
   "enabled": false
 },
 "apify": {
@@ -163,6 +167,12 @@ Add to both `"permission"` and `"agent"."supervisor"."permission"`:
 
 ## 8. Verify
 
+Find the magic-ui MCP path before testing:
+
+```bash
+MAGIC_UI_PATH=$(npm root -g)/@magicuidesign/mcp/dist/server.js
+```
+
 Test each MCP starts:
 
 ```bash
@@ -180,4 +190,4 @@ Restart OpenCode. All 6 always-on MCPs should connect. Toggle others from the GU
 
 ---
 
-**Important:** Replace absolute paths (`/Users/jacobgruber/`, `/opt/homebrew/`) with your own. The 21st API key comes from `https://21st.dev/mcp` after logging in. The wcag-mcp path should point to wherever you cloned it.
+⚠️ **Template users:** Replace all `$HOME` and `$NPM_GLOBAL` placeholders with your actual paths before running. The 21st API key comes from `https://21st.dev/mcp` after logging in. The wcag-mcp path should point to wherever you cloned it.

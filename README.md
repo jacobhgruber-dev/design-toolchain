@@ -2,6 +2,15 @@
 
 A complete UI/UX design toolchain integrated with the [OpenCode](https://opencode.ai) AI coding assistant — component marketplaces, accessibility auditing, visual testing, design systems, animation, brand identity, and design-to-code pipelines. This repo catalogs every tool, documents what's wired in, and provides a blueprint for replicating the setup.
 
+## Using This Repo as a Template
+
+1. **Clone the repo** — `git clone <repo-url> && cd Design`
+2. **Read the README** (this file) for the big picture — what's installed, what each category covers, and what skills auto-activate
+3. **Follow [`SETUP.md`](./SETUP.md) step by step** — replace `$HOME` and `$NPM_GLOBAL` placeholders with your actual paths before running any commands
+4. **Reference the catalogs** — [`mcp-servers.md`](./mcp-servers.md), [`ai-skills-tools.md`](./ai-skills-tools.md), and [`apis-platforms.md`](./apis-platforms.md) document tools beyond the defaults. Use them to evaluate what to add next.
+
+The repo works as a reference even if you don't install everything — the catalog docs are standalone value. Pick and choose what fits your workflow.
+
 ## What's Here
 
 | Document | Content |
