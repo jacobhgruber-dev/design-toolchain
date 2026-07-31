@@ -1,0 +1,7 @@
+# Ignore separate project directories
+Cogito-Project/
+cogito---immersive-sim-template/
+gallery-dl/
+game-dev-repos/
+open-design/
+wcag-mcp/node_modules/
