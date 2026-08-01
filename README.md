@@ -19,6 +19,8 @@ The repo works as a reference even if you don't install everything — the catal
 | [`ai-skills-tools.md`](./ai-skills-tools.md) | Catalog of 40+ AI skills, CLIs, and repos — design intelligence, design-to-code, color/typography, animation |
 | [`apis-platforms.md`](./apis-platforms.md) | Catalog of 50+ APIs and platforms — color/font/icon/illustration APIs, design handoff, collaboration |
 | [`gap-analysis.md`](./gap-analysis.md) | Coverage audit: what we have installed vs. what's missing, ranked recommendations |
+| [`designer-subagent-blueprint.md`](./designer-subagent-blueprint.md) | Architecture blueprint for `@designer` and `@designer-mule` subagents (Grok 4.5/4.3) — agent configs, permission layering, MCP gating |
+| [`orchestration-architecture.md`](./orchestration-architecture.md) | How the supervisor routes design work — permission flow, tool count safety, agent hierarchy |
 | [`SETUP.md`](./SETUP.md) | Step-by-step replication guide (planned) |
 
 ## Toolchain Overview
@@ -37,6 +39,7 @@ The repo works as a reference even if you don't install everything — the catal
 | **Brand & Identity** | brand (skill), design (skill), banner-design (skill) | No (auto-activate) | Brand voice + visual identity; logo design (55 styles), icons (15 styles), CIP mockups; social/ads/hero banners (22 styles) |
 | **Presentations** | slides (skill) | No (auto-activate) | Strategic HTML presentations with Chart.js |
 | **Document Processing** | ocr-pipeline MCP | Yes | Multi-engine OCR for documents, images, audio, handwriting |
+| **Design Orchestration** | `@designer` (Grok 4.5) + `@designer-mule` (Grok 4.3) | No (spawn on demand) | Dedicated design subagent with full MCP access (playwright, 21st, chrome-devtools, open-design, a11y). Handles ALL UI/UX work — visual feedback loops, component retrieval, design systems, accessibility. Mule variant for bounded subtasks. See [orchestration-architecture.md](./orchestration-architecture.md). |
 
 ## MCP Servers
 
